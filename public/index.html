@@ -91,15 +91,20 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="mailto: otienor986@gmail.com">
+				<form method="post" action="https://formspree.io/f/xqkwbvne" method="POST">
 					<div class="fields">
-						<div class="field half">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+						<div class="field" id="fields-half">
+							<label for="name">First Name</label>
+							<input type="text" name="name" id="name" rows="1" />
 						</div>
-						<div class="field half">
+
+						<div class="field" id="fields-half">
+							<label for="name">Last Name</label>
+							<input type="text" name="name" id="name" rows="1" />
+						</div>
+						<div class="field">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
+							<input type="text" name="email" id="email" rows="1" />
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
@@ -107,9 +112,10 @@
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="submit" value="Send Message" class="primary" id="my-form-button" /></li>
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
+					<p id="status"></p>
 				</form>
 				<ul class="icons">
 					<li><a href="https://twitter.com/Rodgers_31" target="_blank" class="icon brands fa-twitter"><span
@@ -407,6 +413,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		var form = document.getElementsByClassName("field");
+
+		async function handleSubmit(event) {
+			event.preventDefault();
+			var status = document.getElementById("my-form-status");
+			var data = new FormData(event.target);
+			fetch(event.target.action, {
+				method: form.method,
+				body: data,
+				headers: {
+					'Accept': 'application/json'
+				}
+			}).then(response => {
+				status.innerHTML = "Thanks for your submission!";
+				form.reset()
+			}).catch(error => {
+				status.innerHTML = "Oops! There was a problem submitting your form"
+			});
+		}
+		form.addEventListener("submit", handleSubmit)
+	</script>
 
 </body>
 

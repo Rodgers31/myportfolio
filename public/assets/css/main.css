@@ -351,6 +351,16 @@ input, select, textarea {
 					width: calc(25% - 0.375rem);
 				}
 
+				form #fields-half{
+					display: flex;
+					flex-direction: column;
+					
+					
+					width: calc(50% - 0.75rem)
+				}
+
+
+				
 		@media screen and (max-width: 480px) {
 
 			form > .fields {
@@ -411,6 +421,7 @@ input, select, textarea {
 		padding: 0 1rem;
 		text-decoration: none;
 		width: 100%;
+		font-size: 1.1rem;
 	}
 
 		input[type="text"]:invalid,
@@ -431,7 +442,8 @@ input, select, textarea {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: #ffffff;
 			box-shadow: 0 0 0 1px #ffffff;
-			color: red;
+			color:white;
+			font-size: 1.5rem;
 		}
 
 	select {
