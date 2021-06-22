@@ -334,14 +334,17 @@ input, select, textarea {
 				flex-shrink: 0;
 				padding: 1.5rem 0 0 1.5rem;
 				width: calc(100% - 1.5rem);
+				
 			}
 
 				form > .fields > .field.half {
 					width: calc(50% - 0.75rem);
+					
 				}
 
 				form > .fields > .field.third {
 					width: calc(100%/3 - 0.5rem);
+					
 				}
 
 				form > .fields > .field.quarter {
@@ -428,6 +431,7 @@ input, select, textarea {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: #ffffff;
 			box-shadow: 0 0 0 1px #ffffff;
+			color: red;
 		}
 
 	select {
@@ -1140,9 +1144,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
