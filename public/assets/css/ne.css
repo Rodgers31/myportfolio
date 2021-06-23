@@ -1,0 +1,22 @@
+article .mycnt{
+    margin-top: 6rem;
+}
+#myicons ul li a {
+margin-left: 70%;
+}
+form .actions-btn{
+    margin-top: 2rem;
+    margin-left: 1.4rem;
+    
+}
+
+#reset-btn {
+    margin-left: 1rem;
+
+}
+#my-form-status {
+ display: flex;
+ margin-left: 6.9rem;
+ 
+ 
+}
