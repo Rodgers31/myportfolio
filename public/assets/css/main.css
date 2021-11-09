@@ -457,8 +457,7 @@ form > .fields > .field.quarter {
 
 form #fields-half {
   display: flex;
-  flex-direction: row;
-  margin-left: 15%;
+  flex-direction: column;
 
   width: calc(50% - 0.75rem);
 }
