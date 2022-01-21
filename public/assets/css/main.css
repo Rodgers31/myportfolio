@@ -324,7 +324,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 h5 {
@@ -1797,4 +1797,8 @@ body.is-preload #footer {
 }
 .second {
   margin-top: 3rem;
+}
+
+article .work h4 {
+  font-size: 5rem;
 }
